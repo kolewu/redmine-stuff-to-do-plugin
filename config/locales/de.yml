@@ -16,3 +16,8 @@ de:
   stuff_to_do_label_filter_by: Filtern nach...
   stuff_to_do_drag_issue_create_list: Ticket hierher ziehen, um eine neue Liste zu erstellen.
   stuff_to_do_drag_issue_remove_list: Ticket hierher ziehen, um das Element von einer Liste zu löschen.
+  stuff_to_do_use_as_stuff_to_do: Benutze als To-Do Einheiten
+  stuff_to_do_time_grid: "Zeitraster"
+  stuff_to_do_time_grid_save_error: "{{count}} Einheiten konnten nicht gesichert werden."
+  stuff_to_do_time_grid_save_notice: "{{count}} Einheiten gesichert."
+  stuff_to_do_use_time_grid: "Benutze Zeitraster"
