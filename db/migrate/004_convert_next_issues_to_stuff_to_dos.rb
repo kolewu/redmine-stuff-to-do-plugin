@@ -5,7 +5,7 @@ end
 
 class ConvertNextIssuesToStuffToDos < ActiveRecord::Migration
   def self.up
-    NextIssue.find(:all).each do |next_issue|
+    NextIssue.find(:all, :order => 'position').each do |next_issue|
       StuffToDo.create!({
                           :user_id => next_issue.user_id,
                           :position => next_issue.position,
