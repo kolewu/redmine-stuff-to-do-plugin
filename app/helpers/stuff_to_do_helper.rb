@@ -18,6 +18,7 @@ module StuffToDoHelper
 
     filters.each do |filter_group, options|
       next unless [:users, :priorities, :statuses, :projects].include?(filter_group)
+      next if filter_group == :users && !User.current.admin?
       if filter_group == :projects
         # Projects only needs a single item
         html << content_tag(:option,

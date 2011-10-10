@@ -3,7 +3,7 @@ class StuffToDoController < ApplicationController
 
   before_filter :get_user
   before_filter :get_time_grid, :only => [:index, :time_grid]
-  before_filter :require_admin, :only => :available_issues
+  #before_filter :require_admin, :only => :available_issues
   helper :stuff_to_do
   helper :timelog
   
