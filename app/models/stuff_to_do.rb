@@ -194,6 +194,7 @@ class StuffToDo < ActiveRecord::Base
   def self.conditions_for_available(filter_by)
     conditions_builder = ARCondition.new(["#{IssueStatus.table_name}.is_closed = ?", false ])
     conditions_builder.add(["#{Project.table_name}.status = ?", Project::STATUS_ACTIVE])
+    conditions_builder.add(Issue.visible_condition(User.current))
 
     case 
     when filter_by.is_a?(User)

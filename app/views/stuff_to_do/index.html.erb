@@ -6,14 +6,14 @@
 </div>
 
 <div class="menu">
-  <% if User.current.admin? %>
+  <%# if User.current.admin? %>
   <div class="user">
     <% form_tag({ :controller => 'stuff_to_do', :action => 'index'}, :method => :get, :id => 'user_switch' ) do  %>
     <label for="user_id"><%= l(:stuff_to_do_label_view_user_list) %></label>
     <%= collection_select(:user, :id, @users.sort, :id, :name, { }, { :name => 'user_id'}) %>
     <% end %>
   </div>
-  <% end %>
+  <%# end %>
 
   <div class="filter">
     <% form_tag({}, :id => 'filter_form') do %>
