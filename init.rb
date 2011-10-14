@@ -49,6 +49,8 @@ Redmine::Plugin.register :stuff_to_do_plugin do
              'use_time_grid' => '0'
            })
 
+  permission :see_other_stuff, { }, :require => :member
+
   menu(:top_menu, :stuff_to_do, {:controller => "stuff_to_do", :action => 'index'}, :caption => :stuff_to_do_title, :if => Proc.new{ User.current.logged? })
 
 end
